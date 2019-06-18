@@ -123,6 +123,67 @@ html {
     visibility: hidden;
     opacity: 0; } }
 
+.products {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4; }
+  .products-heading {
+    margin: 5rem 0; }
+    .products-heading-text {
+      text-align: center;
+      font-size: 4.5rem;
+      font-weight: 300;
+      color: #333; }
+  .products-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.product {
+  position: relative; }
+  .product:hover .product-description {
+    opacity: 1;
+    visibility: visible; }
+  .product:hover .product-img {
+    opacity: .5; }
+  .product-img {
+    width: 100%;
+    transition: all 1s .5s; }
+  .product-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border: 0.1rem solid #333;
+    border-radius: .5rem;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s .5s; }
+    .product-description-heading {
+      font-size: 3rem; }
+    .product-description-price {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 1rem 0; }
+      .product-description-price span {
+        font-weight: 600; }
+    .product-description-btn {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: #f5b149;
+      display: block;
+      padding: .5rem 1rem;
+      border: 0.1rem solid #f5b149;
+      background-color: #666666; }
+
+.product-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .logo {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -191,3 +252,53 @@ html {
   .dropdown-link {
     font-weight: 300;
     font-size: 1.6rem; }
+
+.btn {
+  width: 16rem;
+  height: 4rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative; }
+  .btn:hover .btn-bg {
+    width: 18rem; }
+  .btn:hover .btn-text {
+    color: #fff; }
+  .btn:hover .arrow {
+    transform: translateX(1rem); }
+  .btn:hover .arrow-line-1 {
+    width: 2rem; }
+  .btn-bg {
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    border-radius: 5rem;
+    position: absolute;
+    left: 0;
+    transition: width .2s; }
+  .btn-text {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #333;
+    z-index: 10; }
+  .btn .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s; }
+    .btn .arrow-line {
+      height: .2rem;
+      background-color: #fff;
+      position: absolute;
+      transform-origin: right; }
+    .btn .arrow-line-1 {
+      width: 0rem;
+      transform: translateX(-0.7rem);
+      transition: width .2s; }
+    .btn .arrow-line-2 {
+      width: 1rem;
+      transform: rotateZ(45deg); }
+    .btn .arrow-line-3 {
+      width: 1rem;
+      transform: rotateZ(-45deg); }

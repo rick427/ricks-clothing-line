@@ -21,3 +21,10 @@
        }
    }
 }
+
+@mixin flexPosition($justCont: center, $alignIte: center){
+    display: flex;
+    justify-content: $justCont;
+    align-items: $alignIte;
+}
+    
